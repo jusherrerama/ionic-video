@@ -6,12 +6,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding>
+  <ion-item>
+    <p>{{imageURI}}</p>
+    <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+  </ion-item>
+  <ion-item>
+    <h4>Image Preview</h4>
+    <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="saveVideo()">Upload</button>
+  </ion-item>
 </ion-content>
